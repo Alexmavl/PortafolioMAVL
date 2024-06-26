@@ -1,0 +1,280 @@
+/* Reseteo de margen y definición de fuente y colores principales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    color: white; /* Color de texto blanco */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura de la ventana */
+}
+
+header {
+    background-color: #000; /* Fondo negro para el encabezado */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none; /* Sin viñetas en la lista */
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+.download-cv {
+    background-color: #555; /* Fondo gris oscuro para el botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center; /* Centrado del texto en la sección hero */
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-style: italic; /* Texto en cursiva */
+}
+
+.hero-content p {
+    margin: 10px 0;
+}
+
+.hero-content .email, .hero-content .direccion {
+    color: #999; /* Color gris claro para detalles de contacto */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.hero-image img {
+    max-width: 150px; /* Tamaño de imagen reducido */
+    border-radius: 50%; /* Imagen circular */
+    margin-top: 20px;
+}
+
+/* Adaptaciones para pantallas más grandes */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-content {
+        max-width: 50%;
+    }
+
+    .hero-image img {
+        max-width: 300px; /* Tamaño de imagen ajustado para pantallas grandes */
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+#habilidades, #informacion {
+    background-color: #2a2a2a; /* Fondo gris oscuro para secciones */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#habilidades h2, #informacion h2, #informacion h4, #informacion h5 {
+    text-align: center;
+}
+
+#habilidades p, #informacion p {
+    text-align: justify;
+}
+
+.skill-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bar {
+    flex: 2;
+    height: 20px;
+    background-color: #007bff; /* Color azul para las barras */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Color blanco semitransparente */
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Anchos de las barras de habilidades */
+.bar[style*="width: 50%"]::before {
+    width: 50%;
+}
+
+.bar[style*="width: 40%"]::before {
+    width: 40%;
+}
+
+.bar[style*="width: 70%"]::before {
+    width: 70%;
+}
+
+.bar[style*="width: 30%"]::before {
+    width: 30%;
+}
+
+.bar[style*="width: 35%"]::before {
+    width: 35%;
+}
+
+/* Estilo para secciones adicionales */
+#proyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#proyectos h2 {
+    text-align: center;
+    grid-column: span 2;
+}
+
+article {
+    background-color: #2a2a2a; /* Fondo gris oscuro para artículos */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+article h3 {
+    text-align: center;
+}
+
+article p {
+    text-align: justify;
+}
+
+article img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#contacto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a2a2a; /* Fondo gris oscuro para la sección de contacto */
+    border-radius: 8px;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #007bff; /* Color azul al pasar el ratón */
+}
