@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reseteo de margen y definición de fuente y colores principales */
 body {
     margin: 0;
@@ -11,6 +12,20 @@ body {
 
 header {
     background-color: #000; /* Fondo negro para el encabezado */
+=======
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000;
+>>>>>>> 3115bf2 (git init)
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -18,19 +33,34 @@ header {
 }
 
 nav ul {
+<<<<<<< HEAD
     list-style: none; /* Sin viñetas en la lista */
     padding: 0;
     display: flex;
     gap: 20px; /* Espacio entre los elementos del menú */
+=======
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+>>>>>>> 3115bf2 (git init)
 }
 
 nav ul li a {
     color: white;
+<<<<<<< HEAD
     text-decoration: none; /* Sin subrayado en los enlaces */
 }
 
 .download-cv {
     background-color: #555; /* Fondo gris oscuro para el botón */
+=======
+    text-decoration: none;
+}
+
+.download-cv {
+    background-color: #555;
+>>>>>>> 3115bf2 (git init)
     color: white;
     border: none;
     padding: 10px 20px;
@@ -38,7 +68,11 @@ nav ul li a {
 }
 
 .hero {
+<<<<<<< HEAD
     text-align: center; /* Centrado del texto en la sección hero */
+=======
+    text-align: center;
+>>>>>>> 3115bf2 (git init)
     padding: 20px;
     flex: 1;
     display: flex;
@@ -54,7 +88,11 @@ nav ul li a {
 .hero-content h1 {
     font-size: 2.5em;
     margin: 0;
+<<<<<<< HEAD
     font-style: italic; /* Texto en cursiva */
+=======
+    font-style: italic;
+>>>>>>> 3115bf2 (git init)
 }
 
 .hero-content p {
@@ -62,7 +100,11 @@ nav ul li a {
 }
 
 .hero-content .email, .hero-content .direccion {
+<<<<<<< HEAD
     color: #999; /* Color gris claro para detalles de contacto */
+=======
+    color: #999;
+>>>>>>> 3115bf2 (git init)
 }
 
 .social-media {
@@ -79,12 +121,20 @@ nav ul li a {
 }
 
 .hero-image img {
+<<<<<<< HEAD
     max-width: 150px; /* Tamaño de imagen reducido */
     border-radius: 50%; /* Imagen circular */
     margin-top: 20px;
 }
 
 /* Adaptaciones para pantallas más grandes */
+=======
+    max-width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+>>>>>>> 3115bf2 (git init)
 @media (min-width: 768px) {
     .hero {
         flex-direction: row;
@@ -96,21 +146,37 @@ nav ul li a {
     }
 
     .hero-image img {
+<<<<<<< HEAD
         max-width: 300px; /* Tamaño de imagen ajustado para pantallas grandes */
+=======
+        max-width: 300px;
+>>>>>>> 3115bf2 (git init)
     }
 }
 
 .main-content {
     display: flex;
+<<<<<<< HEAD
+=======
+    flex-wrap: wrap;
+>>>>>>> 3115bf2 (git init)
     justify-content: space-between;
     padding: 20px;
     gap: 20px;
 }
 
+<<<<<<< HEAD
 #habilidades, #informacion {
     background-color: #2a2a2a; /* Fondo gris oscuro para secciones */
     padding: 20px;
     border-radius: 8px;
+=======
+.content-section {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 20px); /* Para dos columnas */
+>>>>>>> 3115bf2 (git init)
 }
 
 #habilidades h2, #informacion h2, #informacion h4, #informacion h5 {
@@ -122,7 +188,10 @@ nav ul li a {
 }
 
 .skill-container {
+<<<<<<< HEAD
     margin-top: 20px;
+=======
+>>>>>>> 3115bf2 (git init)
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -143,8 +212,13 @@ nav ul li a {
 
 .bar {
     flex: 2;
+<<<<<<< HEAD
     height: 20px;
     background-color: #007bff; /* Color azul para las barras */
+=======
+    height: 20px; /* Altura de las barras */
+    background-color: rgba(255, 255, 255, 0.5); /* Color azul para las barras */
+>>>>>>> 3115bf2 (git init)
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -154,27 +228,47 @@ nav ul li a {
     content: '';
     display: block;
     height: 100%;
+<<<<<<< HEAD
     background-color: rgba(255, 255, 255, 0.5); /* Color blanco semitransparente */
     border-radius: 10px;
     position: absolute;
     top: 0;
+=======
+    background-color:#007bff; /* Color blanco semitransparente */
+    border-radius: 10px;
+    position: absolute;
+    top: 0; 
+>>>>>>> 3115bf2 (git init)
     left: 0;
     width: 100%;
 }
 
+<<<<<<< HEAD
 /* Anchos de las barras de habilidades */
+=======
+>>>>>>> 3115bf2 (git init)
 .bar[style*="width: 50%"]::before {
     width: 50%;
 }
 
+<<<<<<< HEAD
 .bar[style*="width: 40%"]::before {
     width: 40%;
+=======
+.bar[style*="width: 75%"]::before {
+    width: 75%;
+}
+
+.bar[style*="width: 80%"]::before {
+    width: 80%;
+>>>>>>> 3115bf2 (git init)
 }
 
 .bar[style*="width: 70%"]::before {
     width: 70%;
 }
 
+<<<<<<< HEAD
 .bar[style*="width: 30%"]::before {
     width: 30%;
 }
@@ -187,11 +281,38 @@ nav ul li a {
 #proyectos {
     display: grid;
     grid-template-columns: 1fr 1fr;
+=======
+.bar[style*="width: 60%"]::before {
+    width: 60%;
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .content-section, #proyectos {
+        flex-basis: 100%;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para la página de proyectos */
+
+#proyectos {
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+>>>>>>> 3115bf2 (git init)
     gap: 20px;
 }
 
 #proyectos h2 {
     text-align: center;
+<<<<<<< HEAD
     grid-column: span 2;
 }
 
@@ -278,3 +399,43 @@ input[type="submit"] {
 .social-media a:hover {
     color: #007bff; /* Color azul al pasar el ratón */
 }
+=======
+    margin-bottom: 20px;
+}
+
+#proyectos article {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 20px); /* Para dos columnas */
+    max-width: calc(50% - 20px); /* Máximo ancho de cada artículo */
+}
+
+#proyectos article h3 {
+    color: #007bff;
+}
+
+#proyectos article p {
+    color: white;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+#proyectos article img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+    #proyectos {
+        flex-direction: column;
+    }
+
+    #proyectos article {
+        flex-basis: 100%;
+        max-width: 100%; /* Ajustar ancho completo en dispositivos móviles */
+    }
+}
+
+>>>>>>> 3115bf2 (git init)
