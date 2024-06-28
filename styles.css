@@ -30,14 +30,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-.download-cv {
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
 .hero {
     text-align: center;
     padding: 20px;
@@ -48,59 +40,9 @@ nav ul li a {
     justify-content: center;
 }
 
-.hero-content {
-    max-width: 600px;
-}
-
-.hero-content h1 {
-    font-size: 2.5em;
-    margin: 0;
-    font-style: italic;
-}
-
-.hero-content p {
-    margin: 10px 0;
-}
-
-.hero-content .email, .hero-content .direccion {
-    color: #999;
-}
-
-.social-media {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-media a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.5em;
-}
-
-.hero-image img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-    .hero {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .hero-content {
-        max-width: 50%;
-    }
-
-    .hero-image img {
-        max-width: 300px;
-    }
-}
-
 .main-content {
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -113,6 +55,7 @@ nav ul li a {
     padding: 20px;
     border-radius: 8px;
     flex: 1 1 calc(50% - 20px); /* Para dos columnas */
+    max-width: calc(50% - 20px); /* Máximo ancho de cada sección */
 }
 
 #habilidades h2, #informacion h2, #informacion h4, #informacion h5 {
@@ -145,7 +88,7 @@ nav ul li a {
 .bar {
     flex: 2;
     height: 20px; /* Altura de las barras */
-    background-color: rgba(255, 255, 255, 0.5); /* Color azul para las barras */
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo de las barras */
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -155,7 +98,7 @@ nav ul li a {
     content: '';
     display: block;
     height: 100%;
-    background-color: #007bff; /* Color azul de las barras */
+    background-color: #007bff; /* Color de las barras */
     border-radius: 10px;
     position: absolute;
     top: 0; 
@@ -164,6 +107,27 @@ nav ul li a {
     transition: width 0.5s ease; /* Transición para animación */
 }
 
+.bar[style*="width: 50%"]::before {
+    width: 50%;
+}
+
+.bar[style*="width: 75%"]::before {
+    width: 75%;
+}
+
+.bar[style*="width: 80%"]::before {
+    width: 80%;
+}
+
+.bar[style*="width: 70%"]::before {
+    width: 70%;
+}
+
+.bar[style*="width: 60%"]::before {
+    width: 60%;
+}
+
+/* Adaptaciones para pantallas pequeñas */
 @media (max-width: 767px) {
     .main-content {
         flex-direction: column;
@@ -171,14 +135,13 @@ nav ul li a {
 
     .content-section, #proyectos {
         flex-basis: 100%;
-        grid-template-columns: 1fr;
+        max-width: 100%; /* Ajustar ancho completo en dispositivos móviles */
     }
 }
 
+/* Estilos específicos para la página de contacto y acerca de mí */
 
-/* Estilos específicos para la página de proyectos */
-
-#proyectos {
+#contacto, #about {
     max-width: 1200px; /* Máximo ancho del contenedor */
     margin: 0 auto; /* Centrar el contenedor */
     display: flex;
@@ -188,42 +151,57 @@ nav ul li a {
     gap: 20px;
 }
 
-#proyectos h2 {
+#contacto h2, #about h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#proyectos article {
+#contacto .content-section, #about .content-section {
     background-color: #2a2a2a;
     padding: 20px;
     border-radius: 8px;
     flex: 1 1 calc(50% - 20px); /* Para dos columnas */
-    max-width: calc(50% - 20px); /* Máximo ancho de cada artículo */
+    max-width: calc(50% - 20px); /* Máximo ancho de cada sección */
 }
 
-#proyectos article h3 {
-    color: #007bff;
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#proyectos article p {
+#contacto label {
+    font-weight: bold;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#contacto input[type="submit"] {
+    background-color: #007bff;
     color: white;
-    text-align: justify;
-    margin-top: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-#proyectos article img {
-    max-width: 100%;
-    border-radius: 8px;
+#contacto .social-media {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
-@media (max-width: 767px) {
-    #proyectos {
-        flex-direction: column;
-    }
-
-    #proyectos article {
-        flex-basis: 100%;
-        max-width: 100%; /* Ajustar ancho completo en dispositivos móviles */
-    }
+#contacto .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
 }
