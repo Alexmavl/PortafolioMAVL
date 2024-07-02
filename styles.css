@@ -56,7 +56,7 @@ nav ul li a {
 }
 
 .main-content {
-    max-width: 1200px; /* Máximo ancho del contenedor */
+    max-width: 1000px; /* Máximo ancho del contenedor */
     margin: 0 auto; /* Centrar el contenedor */
     display: flex;
     flex-wrap: wrap;
@@ -67,10 +67,10 @@ nav ul li a {
 
 .content-section {
     background-color: #2a2a2a;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     flex: 1 1 calc(50% - 20px); /* Para dos columnas */
-    max-width: calc(50% - 20px); /* Máximo ancho de cada sección */
+    max-width: calc(100% - 20px); /* Máximo ancho de cada sección */
 }
 
 #habilidades h2, #informacion h2, #informacion h4, #informacion h5 {
@@ -127,19 +127,19 @@ nav ul li a {
 }
 
 .bar[style*="width: 75%"]::before {
-    width: 75%;
+    width: 45%;
 }
 
 .bar[style*="width: 80%"]::before {
-    width: 80%;
+    width: 35%;
 }
 
 .bar[style*="width: 70%"]::before {
-    width: 70%;
+    width: 40%;
 }
 
 .bar[style*="width: 60%"]::before {
-    width: 60%;
+    width: 40%;
 }
 
 /* Adaptaciones para pantallas pequeñas */
@@ -173,10 +173,10 @@ nav ul li a {
 
 #contacto .content-section, #about .content-section {
     background-color: #2a2a2a;
-    padding: 20px;
+    padding: 50px;
     border-radius: 8px;
     flex: 1 1 calc(50% - 20px); /* Para dos columnas */
-    max-width: calc(50% - 20px); /* Máximo ancho de cada sección */
+    max-width: calc(80% - 20px); /* Máximo ancho de cada sección */
 }
 
 #contacto form {
@@ -294,7 +294,7 @@ nav ul li a {
 
 .hero-content {
     flex: 1;
-    min-width: 100px; /* Ancho mínimo para el contenido de texto */
+    min-width: 200px; /* Ancho mínimo para el contenido de texto */
     padding-right: 20px;
 }
 
